@@ -10,11 +10,26 @@ body {
 .container {
     position: relative;
     text-align: center;
+    width: 100%;
+    max-width: 1200px;
 }
 
-img {
-    max-width: 100%;
+.logo {
+    display: none;
+    width: calc(100% - 40px);
+    margin: 0 auto 20px;
+}
+
+.when-image {
+    display: none;
+    width: calc(100% - 40px);
+    margin: 20px auto 0;
+}
+
+picture, #ghostImage {
+    width: 100%;
     height: auto;
+    display: block;
 }
 
 .audio-control {
@@ -40,6 +55,10 @@ img {
 }
 
 @media (max-width: 768px) {
+    .logo, .when-image {
+        display: block;
+    }
+    
     .audio-control {
         position: static;
         margin: 20px auto;

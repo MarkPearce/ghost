@@ -8,7 +8,11 @@
 </head>
 <body>
     <div class="container">
-        <img src="ghost.webp" alt="Ghost" id="ghostImage">
+        <img src="logo.png" alt="Ghost Logo" class="logo">
+        <picture>
+            <source media="(max-width: 768px)" srcset="ghost-mobile.webp">
+            <img src="ghost.webp" alt="Ghost" id="ghostImage">
+        </picture>
         <audio id="ghostSound" loop>
             <source src="Ghost-Call Me Little Sunshine.mp3" type="audio/mpeg">
         </audio>
@@ -20,6 +24,7 @@
                 <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/>
             </svg>
         </button>
+        <img src="when.png" alt="When" class="when-image">
     </div>
     <script src="app.js"></script>
 </body>
