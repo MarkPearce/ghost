@@ -4,7 +4,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
+    height: 100vh;
+    overflow: hidden;
 }
 
 .container {
@@ -12,24 +13,42 @@ body {
     text-align: center;
     width: 100%;
     max-width: 1200px;
+    height: calc(100vh - 40px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px 0;
+    gap: 20px;
 }
 
 .logo {
     display: none;
     width: calc(100% - 80px);
-    margin: 0 auto 20px;
+    margin: 0 auto;
+    flex-shrink: 1;
+    object-fit: contain;
 }
 
 .when-image {
     display: none;
     width: calc(100% - 80px);
-    margin: 20px auto 0;
+    margin: 0 auto;
+    flex-shrink: 1;
+    object-fit: contain;
 }
 
-picture, #ghostImage {
+picture {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 0;
+}
+
+#ghostImage {
     width: 100%;
-    height: auto;
-    display: block;
+    height: 100%;
+    object-fit: contain;
 }
 
 .audio-control {
@@ -46,6 +65,7 @@ picture, #ghostImage {
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 10;
 }
 
 .audio-control svg {
@@ -55,8 +75,24 @@ picture, #ghostImage {
 }
 
 @media (max-width: 768px) {
+    body {
+        height: auto;
+        overflow-y: auto;
+    }
+    
+    .container {
+        height: auto;
+        gap: 10px;
+        padding: 20px 0;
+    }
+    
     .logo, .when-image {
         display: block;
+        max-height: 30vh;
+    }
+    
+    picture {
+        height: auto;
     }
     
     .audio-control {
