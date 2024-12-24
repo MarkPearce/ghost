@@ -16,13 +16,13 @@ body {
 
 .logo {
     display: none;
-    width: calc(100% - 40px);
+    width: calc(100% - 80px);
     margin: 0 auto 20px;
 }
 
 .when-image {
     display: none;
-    width: calc(100% - 40px);
+    width: calc(100% - 80px);
     margin: 20px auto 0;
 }
 
